@@ -1,7 +1,8 @@
-using Microsoft.EntityFrameworkCore.Storage;
+using EstudandoHttpPostEGet.Models;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
 
 namespace EstudandoHttpPostEGet
 {
@@ -20,9 +21,5 @@ namespace EstudandoHttpPostEGet
         [Display(Name = "CategoriaId")]
         [Column("CategoriaId")]
         public int CategoriaId { get; set; }
-
-        public List<Produto> ObterTodos()
-        {
-        }
     }
 }

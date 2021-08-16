@@ -11,5 +11,6 @@ namespace EstudandoHttpPostEGet.Models
         [Display(Name = "Nome")]
         [Column("Nome")]
         public string Nome { get; set; }
+
     }
 }

@@ -1,6 +1,7 @@
 ﻿using EstudandoHttpPostEGet.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -42,6 +43,7 @@ namespace EstudandoHttpPostEGet.Controllers
         // GET: Produtos/Create
         public IActionResult Create()
         {
+            _context.Categorias.ToList();
             return View();
         }
 
@@ -54,6 +56,12 @@ namespace EstudandoHttpPostEGet.Controllers
         {
             if (ModelState.IsValid)
             {
+                var categoriaId = produto.CategoriaId;
+                var categoria = await _context.Categorias.FindAsync(categoriaId);
+                if (categoria == null)
+                {
+                    return View(produto);
+                }
                 produto.Preco /= 100;
                 _context.Add(produto);
                 await _context.SaveChangesAsync();
@@ -146,5 +154,6 @@ namespace EstudandoHttpPostEGet.Controllers
         {
             return _context.Produtos.Any(e => e.Id == id);
         }
+        
     }
 }
