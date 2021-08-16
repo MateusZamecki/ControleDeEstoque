@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<head>
+    <link rel="stylesheet" href="css/CadastrarProduto.css" />
+</head>
+<header class="Header"></header>
+<body>
+    <div id="container">
+        <h2>Cadastre um produto</h2>
+        <form id="register-form">
+            <div class="full-box">
+                <label for="nomeProduto" class="labelNome">Nome do Produto</label>
+                <input type="text" id="nomeProduto" placeholder="Nome" />
+            </div>
+            <div class="half-box">
+                <label for="categoriaProduto">Categoria do Produto</label>
+                <input type="number" id="categoriaProduto" min="0" value="0"/>
+            </div>
+            <div class="half-box spacing">
+                <label for="precoProduto">Preço do Produto</label>
+                <input type="number" id="precoProduto" min="0" value="0" step="0.01"/>
+            </div>
+            <div class="full-box">
+                <input type="button" id="Registrar" value="Registrar" />
+            </div>
+        </form>
+    </div>
+    <div class="saida">
+        <div id="resultado">
+
+        </div>
+    </div>
+</body>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/site.js"></script>
