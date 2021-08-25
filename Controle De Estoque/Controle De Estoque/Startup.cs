@@ -21,9 +21,6 @@ namespace Controle_De_Estoque
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var conexao = new Conexao().ObterString();
-            services.AddDbContext<Contexto>
-                (options => options.UseSqlServer(conexao));
             services.AddControllersWithViews();
         }
 
@@ -51,7 +48,7 @@ namespace Controle_De_Estoque
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Principal}/{id?}");
             });
         }
     }

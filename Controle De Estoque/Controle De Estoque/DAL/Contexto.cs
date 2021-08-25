@@ -12,6 +12,11 @@ namespace Controle_De_Estoque.DAL
         public Contexto(DbContextOptions<Contexto> options) : base(options)
         {
         }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            var conexaoTexto = new Conexao().ObterString();
+            optionsBuilder.UseSqlServer(conexaoTexto);
+        }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<TipoUsuario> TipoUsuarios { get; set; }
         public DbSet<Acesso> Acessos { get; set; }

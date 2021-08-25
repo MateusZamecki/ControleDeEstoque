@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Controle_De_Estoque.Migrations
 {
-    public partial class InicializaBanco : Migration
+    public partial class inicializaDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

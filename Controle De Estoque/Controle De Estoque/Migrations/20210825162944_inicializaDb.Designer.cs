@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Controle_De_Estoque.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20210825071135_InicializaBanco")]
-    partial class InicializaBanco
+    [Migration("20210825162944_inicializaDb")]
+    partial class inicializaDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
