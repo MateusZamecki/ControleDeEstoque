@@ -1,0 +1,14 @@
+using Controle_De_Estoque.Models;
+using ProjetoIntegradorMVC.Models.Repositorio.Interfaces;
+using System;
+
+namespace ProjetoIntegradorMVC.Models.Repositorio.Interfaces
+{
+    public class RepositorioUsuario : RepositorioBase<Usuario>, IRepositorioUsuario
+    {
+        public RepositorioUsuario(bool SaveChanges = true) : base(SaveChanges)
+        {
+
+        }
+    }
+}
