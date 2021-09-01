@@ -18,11 +18,14 @@ namespace Controle_De_Estoque.DAL
             optionsBuilder.UseSqlServer(conexaoTexto);
         }
         public DbSet<Usuario> Usuarios { get; set; }
-        public DbSet<TipoUsuario> TipoUsuarios { get; set; }
+        public DbSet<ItemCarrinho> ItensCarrinho { get; set; }
+        public DbSet<Carrinho> Carrinhos { get; set; }
+        public DbSet<Funcionario> Funcionarios { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Acesso> Acessos { get; set; }
         public DbSet<Fornecedor> Fornecedores { get; set; }
         public DbSet<Venda> Vendas { get; set; }
-        public DbSet<ProdutoVenda> ProdutoVendas { get; set; }
+        public DbSet<ProdutoVenda> ProdutosVenda { get; set; }
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
     }

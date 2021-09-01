@@ -4,7 +4,7 @@ using System;
 
 namespace ProjetoIntegradorMVC.Models.Repositorio.Interfaces
 {
-    public interface IRepositorioUsuario : IRepositorio<Usuario>
+    public interface IRepositorioItemCarrinho : IRepositorio<ItemCarrinho>
     {
     }
 }

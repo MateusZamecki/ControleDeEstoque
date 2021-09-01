@@ -48,7 +48,7 @@ namespace Controle_De_Estoque
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Principal}/{id?}");
+                    pattern: "{controller=FuncionarioProduto}/{action=Principal}/{id?}");
             });
         }
     }

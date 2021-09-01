@@ -4,7 +4,11 @@ using System;
 
 namespace ProjetoIntegradorMVC.Models.Repositorio.Interfaces
 {
-    public interface IRepositorioTipoUsuario : IRepositorio<TipoUsuario>
+    public class RepositorioCliente : RepositorioBase<Cliente>, IRepositorioCliente
     {
+        public RepositorioCliente(bool SaveChanges = true) : base(SaveChanges)
+        {
+
+        }
     }
 }

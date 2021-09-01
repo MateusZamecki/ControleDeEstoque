@@ -1,4 +1,6 @@
+using ProjetoIntegradorMVC.Models.Repositorio;
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Controle_De_Estoque.Models
 {

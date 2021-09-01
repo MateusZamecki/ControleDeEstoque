@@ -4,9 +4,9 @@ using System;
 
 namespace ProjetoIntegradorMVC.Models.Repositorio.Interfaces
 {
-    public class RepositorioUsuario : RepositorioBase<Usuario>, IRepositorioUsuario
+    public class RepositorioItemCarrinho : RepositorioBase<ItemCarrinho>, IRepositorioItemCarrinho
     {
-        public RepositorioUsuario(bool SaveChanges = true) : base(SaveChanges)
+        public RepositorioItemCarrinho(bool SaveChanges = true) : base(SaveChanges)
         {
 
         }
